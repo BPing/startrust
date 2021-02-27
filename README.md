@@ -1,0 +1,2 @@
+# startrust
+learn rust
