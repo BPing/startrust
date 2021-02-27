@@ -1,0 +1,13 @@
+[package]
+name = "startrust"
+version = "0.1.0"
+authors = ["cbping <452775680@qq.com>"]
+edition = "2018"
+
+#[profile.release]
+#panic = 'abort'
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8.3"
