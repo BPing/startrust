@@ -7,7 +7,6 @@ impl<T> MyBox<T> {
 }
 
 use std::ops::Deref;
-// use std::ops::Drop;
 
 impl<T> Deref for MyBox<T> {
     type Target = T;
@@ -44,8 +43,8 @@ pub fn mybox_func() {
 }
 
 fn drop_order() {
-    let _c = MyBoxStr::new(String::from("my stuff"));
-    let _d = MyBoxStr::new(String::from("other stuff"));
+    let _c = MyBoxStr::new(String::from("first"));
+    let _d = MyBoxStr::new(String::from("second"));
     println!("MyBoxStr created.");
     let e = MyBoxStr::new(String::from("std::mem::drop"));
     drop(e);
