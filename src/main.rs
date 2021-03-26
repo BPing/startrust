@@ -4,14 +4,18 @@ mod macro_demo;
 mod error_demo;
 mod vector_demo;
 mod box_demo;
-
-
-use rand::Rng;
-
+mod unsafe_demo;
+mod transfer;
+mod crust;
+mod error_chain_demo;
 
 fn main() {
-    let mut rng = rand::thread_rng();
-    println!("Random f64: {}", rng.gen::<f64>());
+    // crust::rust_cc_func();
+
+    error_chain_demo::error_chain_func();
+
+    unsafe_demo::unsafe_func();
+
     macro_demo::test();
     generics_demo::test();
 
